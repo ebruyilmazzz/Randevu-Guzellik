@@ -1,0 +1,248 @@
+/* Genel ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Ekip alanı */
+#ekip {
+    background-color: #f3f3f3;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#ekip h3 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+/* Kart stili */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+    margin: 15px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-front {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card-front img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.card-front h4, .card-front p {
+    margin: 10px 0;
+    color: #444;
+}
+
+.card-back {
+    background-color: #333;
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.social-media {
+    margin-top: 15px;
+}
+
+.social-media a {
+    color: #ff4b5c;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #fff;
+}
+/* Menü alanı */
+#menu {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px; /* Kalınlığı artırmak için padding'i artırdım */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#menu .logo h1 {
+    font-size: 28px; /* Font boyutunu artırdım */
+    font-weight: bold;
+    color: #fff;
+}
+
+#menu nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#menu nav ul li {
+    margin: 0 20px; /* Boşlukları artırdım */
+}
+
+#menu nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px; /* Font boyutunu artırdım */
+    transition: color 0.3s;
+    padding: 10px 15px; /* Daha kalın görünmesi için padding'i artırdım */
+    border-radius: 4px;
+}
+
+#menu nav ul li a:hover {
+    background-color: #ff4b5c;
+    color: #fff;
+}
+.card-front img {
+    width: 100%;
+    height: 200px; /* 150px'den 200px'e çıkardım */
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ff4b5c;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}/* Mobil uyumlu stil ayarlamaları */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 40px; /* Mobilde başlık boyutunu azalt */
+    }
+
+    .hero-content p {
+        font-size: 18px; /* Mobilde metin boyutunu azalt */
+    }
+
+    .btn {
+        padding: 8px 15px; /* Butonun iç boşluğunu azalt */
+        font-size: 16px; /* Buton yazı boyutunu azalt */
+    }
+
+    .campaigns {
+        padding: 30px 10px; /* Mobilde padding'i azalt */
+    }
+
+    .campaigns h2 {
+        font-size: 36px; /* Mobilde başlık boyutunu azalt */
+    }
+
+    .slider-container {
+        max-width: 100%; /* Slider'ın genişliğini %100 yap */
+    }
+
+    .slide {
+        margin: 0; /* Mobilde kaydırıcıdaki margin'i sıfırla */
+        padding: 10px; /* İç boşluğu azalt */
+    }
+
+    .slide img {
+        width: 100%; /* Resmin genişliğini %100 yap */
+        height: auto; /* Yüksekliği otomatik ayarla */
+    }
+
+    footer {
+        padding: 15px 0; /* Footer iç boşluğunu azalt */
+    }
+
+    .appointment {
+        padding: 20px; /* Randevu alanının iç boşluğunu azalt */
+        margin: 30px auto; /* Margin'i azalt */
+    }
+
+    .appointment h2 {
+        font-size: 20px; /* Başlık boyutunu azalt */
+    }
+
+    form {
+        flex-direction: column; /* Formu dikey hizala */
+    }
+
+    label {
+        flex: 1 1 100%; /* Etiketin genişliğini %100 yap */
+    }
+
+    input {
+        flex: 1 1 100%; /* Giriş alanının genişliğini %100 yap */
+    }
+
+    button[type="submit"] {
+        padding: 12px; /* Buton iç boşluğunu artır */
+        font-size: 16px; /* Buton yazı boyutunu azalt */
+    }
+
+    header {
+        flex-direction: column; /* Header'ı dikey hizala */
+        align-items: flex-start; /* Elemanları sola hizala */
+    }
+
+    nav ul {
+        flex-direction: column; /* Menü öğelerini dikey hizala */
+        margin-right: 0; /* Sağdan boşluğu kaldır */
+    }
+
+    nav ul li {
+        margin-left: 0; /* Menü elemanları arasındaki boşluğu kaldır */
+        margin-top: 10px; /* Menü elemanları arasına yukarıdan boşluk ekle */
+    }
+}

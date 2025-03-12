@@ -1,0 +1,264 @@
+/* Genel ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sayfa arka planı */
+body {
+    background: linear-gradient(135deg, #f3f3f3, #e0e0e0);
+}
+
+
+
+/* Hizmetler alanı */
+#egitimler {
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+#egitimler h3 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+/* Kart stili */
+.card {
+    width: 300px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: inline-block;
+    margin: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.baslikcard {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    margin-top: 15px;
+}
+
+.cardp {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Footer alanı */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #ff4b5c;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+.card img {
+    width: 100%;
+    height: 200px; /* Sabit bir yükseklik belirleyin */
+    object-fit: cover; /* Görüntülerin kesilmesini önlemek için */
+    border-bottom: 1px solid #ddd;
+}
+/* Menü stilini güncelleme */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333; /* Menü arka plan rengi */
+    color: #fff; /* Yazı rengi */
+}
+
+header .logo h1 {
+    font-size: 28px; /* Logo font büyüklüğü */
+    color: #fff; /* Logo yazı rengi */
+    font-weight: bold; /* Kalın font */
+}
+
+nav ul {
+    list-style: none; /* Noktaları kaldırma */
+    display: flex; /* Yatay sıralama */
+    margin-right: 30px; /* Menü sağa yaslama */
+}
+
+nav ul li {
+    margin-left: 20px; /* Menü elemanları arasındaki boşluk */
+}
+
+nav ul li a {
+    color: #fff; /* Menü bağlantı yazı rengi */
+    text-decoration: none; /* Alt çizgi kaldırma */
+    font-size: 18px; /* Yazı boyutu */
+    padding: 10px 15px; /* İç boşluk */
+    transition: color 0.3s; /* Geçiş efekti */
+    border-radius: 4px; /* Hafif yuvarlatma */
+}
+
+nav ul li a:hover {
+    background-color: #ff4b5c; /* Üzerine gelindiğinde arka plan rengi */
+    color: #fff; /* Yazı rengi beyaz kalır */
+}
+/* Mobil uyumlu stil ayarlamaları */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 40px; /* Mobilde başlık boyutunu azalt */
+    }
+
+    .hero-content p {
+        font-size: 18px; /* Mobilde metin boyutunu azalt */
+    }
+
+    .btn {
+        padding: 8px 15px; /* Butonun iç boşluğunu azalt */
+        font-size: 16px; /* Buton yazı boyutunu azalt */
+    }
+
+    .campaigns {
+        padding: 30px 10px; /* Mobilde padding'i azalt */
+    }
+
+    .campaigns h2 {
+        font-size: 36px; /* Mobilde başlık boyutunu azalt */
+    }
+
+    .slider-container {
+        max-width: 100%; /* Slider'ın genişliğini %100 yap */
+    }
+
+    .slide {
+        margin: 0; /* Mobilde kaydırıcıdaki margin'i sıfırla */
+        padding: 10px; /* İç boşluğu azalt */
+    }
+
+    .slide img {
+        width: 100%; /* Resmin genişliğini %100 yap */
+        height: auto; /* Yüksekliği otomatik ayarla */
+    }
+
+    footer {
+        padding: 15px 0; /* Footer iç boşluğunu azalt */
+    }
+
+    .appointment {
+        padding: 20px; /* Randevu alanının iç boşluğunu azalt */
+        margin: 30px auto; /* Margin'i azalt */
+    }
+
+    .appointment h2 {
+        font-size: 20px; /* Başlık boyutunu azalt */
+    }
+
+    form {
+        flex-direction: column; /* Formu dikey hizala */
+    }
+
+    label {
+        flex: 1 1 100%; /* Etiketin genişliğini %100 yap */
+    }
+
+    input {
+        flex: 1 1 100%; /* Giriş alanının genişliğini %100 yap */
+    }
+
+    button[type="submit"] {
+        padding: 12px; /* Buton iç boşluğunu artır */
+        font-size: 16px; /* Buton yazı boyutunu azalt */
+    }
+
+    header {
+        flex-direction: column; /* Header'ı dikey hizala */
+        align-items: flex-start; /* Elemanları sola hizala */
+    }
+
+    nav ul {
+        flex-direction: column; /* Menü öğelerini dikey hizala */
+        margin-right: 0; /* Sağdan boşluğu kaldır */
+    }
+
+    nav ul li {
+        margin-left: 0; /* Menü elemanları arasındaki boşluğu kaldır */
+        margin-top: 10px; /* Menü elemanları arasına yukarıdan boşluk ekle */
+    }
+}
+
+#hizmetler .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 300px; /* Kart genişliği */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card .baslikcard {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.card .cardp {
+    font-size: 1em;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* Footer kısmının sabitlenmesi için */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+

@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f3f3f3, #e0e0e0);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333; /* Menü arka plan rengi */
+    color: #fff; /* Yazı rengi */
+}
+
+header .logo h1 {
+    font-size: 28px; /* Logo font büyüklüğü */
+    color: #fff; /* Logo yazı rengi */
+    font-weight: bold; /* Kalın font */
+}
+
+nav ul {
+    list-style: none; /* Noktaları kaldırma */
+    display: flex; /* Yatay sıralama */
+    margin-right: 30px; /* Menü sağa yaslama */
+}
+
+nav ul li {
+    margin-left: 20px; /* Menü elemanları arasındaki boşluk */
+}
+
+nav ul li a {
+    color: #fff; /* Menü bağlantı yazı rengi */
+    text-decoration: none; /* Alt çizgi kaldırma */
+    font-size: 18px; /* Yazı boyutu */
+    padding: 10px 15px; /* İç boşluk */
+    transition: color 0.3s; /* Geçiş efekti */
+    border-radius: 4px; /* Hafif yuvarlatma */
+}
+
+nav ul li a:hover {
+    background-color: #ff4b5c; /* Üzerine gelindiğinde arka plan rengi */
+    color: #fff; /* Yazı rengi beyaz kalır */
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('../image/anasayfa.jpg') no-repeat center center/cover;
+}
+
+
+.hero h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;   
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.hero .btn {
+    background-color: #140428;
+    color: rgb(0, 0, 0);
+    padding: 12px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Genel stil */
+.campaigns {
+    padding: 10px;
+    text-align: center;
+}
+
+.campaigns h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.slide h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.slide p {
+    font-size: 1rem;
+    color: #555;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+    .campaigns h2 {
+        font-size: 1.5rem;
+    }
+
+    .slider-container {
+        max-width: 100%;
+    }
+
+    .slide h3 {
+        font-size: 1.2rem;
+    }
+
+    .slide p {
+        font-size: 0.9rem;
+    }
+
+    button.prev,
+    button.next {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+}
+
+/* Çok küçük ekranlar için */
+@media (max-width: 480px) {
+    .campaigns h2 {
+        font-size: 1.2rem;
+    }
+
+    .slider-container {
+        padding: 10px;
+    }
+
+    .slide h3 {
+        font-size: 1rem;
+    }
+
+    .slide p {
+        font-size: 0.8rem;
+    }
+
+    button.prev,
+    button.next {
+        font-size: 1.2rem;
+        padding: 6px;
+    }
+}
+
+.btn {
+    background-color: #ff4b5c;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e03e4f;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    font-size: 30px;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ff4b5c;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

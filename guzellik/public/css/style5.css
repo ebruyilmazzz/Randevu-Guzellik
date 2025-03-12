@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Fira+Sans:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.navigation {
+    background-color: #654236;
+    width: clamp(150px, 150px + 20vw, 1000px);
+    padding: 3rem;
+}
+
+.navigation li {
+    list-style: none;
+    display: block;
+    padding: 0.5rem;
+    font-size: clamp(1rem, 1rem + 1vw, 3rem);
+}
+
+.navigation li:hover {
+    background-color: rgb(255, 255, 255);
+    color: #654236;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+.navigation li:hover a {
+    color: #654236;
+    transition: all ease-in-out 0.3s;
+}
